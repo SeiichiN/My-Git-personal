@@ -1,12 +1,14 @@
-\documentclass{jsarticle}
-% \documentclass[dvipdfmx]{jsarticle}
+\documentclass[dvipdfmx]{jsarticle}
 
+\input{title}
 \input{begin}
 
 \renewcommand{\include}[1]{}
 
 \renewcommand\documentclass[2][]{}
+\renewcommand{\lstlistingname}{リスト}
 
+%% --------- title page ------------------
 \maketitle
 
 \pagenumbering{roman}
@@ -14,7 +16,17 @@
 \tableofcontents
 
 \newpage
+%% --------- title page end --------------
 
+%% -------- title ------------------
+% \newcommand{\mytitle}[2]
+% {%
+% \begin{center}
+%  {\LARGE\bf #1} #2
+% \end{center}
+% }%
+% \mytitle{TITLE}{2021/06/21 Mon.}
+%% --------- title end -------------
 \pagenumbering{arabic}
 
 \input{tex1}
@@ -23,22 +35,16 @@
 
 % \input{tex3}
 
-% \input{tex4}
+% \newpage
+
+% \input{tex11}
 
 % \newpage
 
-% \input{tex5}
+% \input{tex12}
 
-% \input{tex6}
-
-% \input{tex7}
-
-% \input{tex8}
-
-% \newpage
-
-% \input{tex9}
+% \input{tex13}
 
 \input{end}
 
-%% 修正時刻: Fri Jul  9 11:44:00 2021
+%% 修正時刻： Mon Jul 12 15:04:13 2021

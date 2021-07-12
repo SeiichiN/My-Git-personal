@@ -1,9 +1,10 @@
-\title{個人レベルでGithubを使う}
-\author{Seiichi Nukayama}
-\date{2021-07-09}
+
 \usepackage{tcolorbox}
 \usepackage{color}
 \usepackage{listings, plistings}
+
+%% ノート/latexメモ
+%% http://pepper.is.sci.toho-u.ac.jp/pepper/index.php?%A5%CE%A1%BC%A5%C8%2Flatex%A5%E1%A5%E2
 
 % Java
 \lstset{% 
@@ -26,15 +27,17 @@
   language={Java},
   lineskip=-0.5zw,
   morecomment={[s][{\color[cmyk]{1,0,0,0}}]{/**}{*/}},
+  keepspaces=true,         % 空白の連続をそのままで
+  showstringspaces=false,  % 空白字をOFF
 }
+%\usepackage[dvipdfmx]{graphicx}
 \usepackage{url}
-% \usepackage[dvipdfmx]{graphicx}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{amsmath, amssymb}
 \usepackage{itembkbx}
 \usepackage{eclbkbox}	% required for `\breakbox' (yatex added)
+\usepackage{multirow}
 \usepackage{enumerate}
-\usepackage{setspace}
 \fboxrule=0.5pt
 \parindent=1em
 \begin{document}
@@ -45,4 +48,4 @@
 \newcommand{\anaume}[1][]{\refstepcounter{mycounter}{#1}{\boxed{\phantom{aa}\themycounter \phantom{aa}}}} %穴埋め問題の空欄作ってる。
 \newcommand{\anaumesmall}[1][]{\refstepcounter{mycounter}{#1}{\boxed{\tiny{\phantom{a}\themycounter \phantom{a}}}}}%小さい版作ってる。色々改造できる。
 
-%% 修正時刻： Fri Jul  9 12:01:07 2021
+%% 修正時刻： Tue May  5 10:19:29 2020

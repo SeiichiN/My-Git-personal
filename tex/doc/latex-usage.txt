@@ -176,6 +176,13 @@ $\to$  -- ->
 ①②などの出力
 \textcircled{\scriptsize 1} ... ① 
 
+傍点
+\kenten{自然}
+
+ルビ
+\ruby[g]{百舌鳥}{もず}
+\ruby{闊達}{かっ|たつ}
+
 文中でローマ数字を使う
 \usepackage{otf}
 ---
