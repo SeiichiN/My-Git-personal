@@ -11,20 +11,33 @@
 
 自分のGitHubにアクセスし、新しくリポジトリを作成する。
 
-\begin{enumerate}
+\begin{tcolorbox}
+ \begin{enumerate}
  \item リポジトリ名 --- indean-poker
  \item Description --- Indean Poker Game of Servlet\_JSP
  \item mode --- Private
- \item Add a README file --- Check!
- \item Add .gitignore --- Check! --- Javaを選択
- \item Choose a lisence --- Check! --- MIT Lisence
+ \item Add a README file --- チェック!
+ \item Add .gitignore --- チェック! --- Javaを選択
+ \item Choose a lisence --- チェック! --- MIT Lisence
 \end{enumerate}
+\end{tcolorbox}
 
-\includegraphics[width=12cm]{img/21-git-new.png}
+\vspace{3mm}
+\begin{tabular}{|l|}
+ \hline
+\includegraphics[width=12cm]{img/21-git-new.png} \\
+ \hline
+\end{tabular}
+\vspace{3mm}
 
 リポジトリができたら、そのURLをコピーする。
 
-\includegraphics[width=12cm]{img/22-git-url.png}
+\begin{tabular}{|l|}
+ \hline
+\includegraphics[width=12cm]{img/22-git-url.png} \\
+ \hline
+\end{tabular}
+\vspace{3mm}
 
 
 \subsubsection{Eclipseのワークスペースで git clone}
@@ -36,6 +49,7 @@ sourcetree を起動し、ファイルメニューから「新規/クローン�
 
 クローンを作成するウィンドウが開くので、上から順に以下のように指定する。
 
+\begin{tcolorbox}
 \begin{enumerate}
  \item GitHubでコピーしたURLを貼り付ける。
  \item Eclipseのワークスペース$+$indean-poker \\
@@ -43,13 +57,30 @@ sourcetree を起動し、ファイルメニューから「新規/クローン�
  \item 名前 --- indean-poker
  \item Local Folder --- ルート
 \end{enumerate}
+\end{tcolorbox}
 
 \textgt{クローン} をクリックして実行。
 
-\includegraphics[width=12cm]{img/23-clone.png}
+\begin{tabular}{|l|}
+ \hline
+\includegraphics[width=12cm]{img/23-clone.png} \\
+ \hline
+\end{tabular}
+\vspace{3mm}
 
 これで、\textsf{C:\yen pleiades\yen workspace} に \textsf{indean-poker}の
 フォルダができているはず。
+
+\vspace{3mm}
+\begin{tabular}{|l|}
+ \hline
+ 上でやったことをコマンドプロンプトでやるとこうなる。 \\
+ $>$ cd C:\yen preiades\yen workspace \\
+ C:\yen preiades\yen workspace$>$ git clone https://github.com/xxxxxxxx/indean-poker.git \\
+ \hline
+\end{tabular}
+\vspace{3mm}
+
 
 \subsubsection{Eclipseで新規動的Webプロジェクトを作成}
 
@@ -67,7 +98,7 @@ Eclipse でワークスペースを開き、以下のように動的Webプロジ
 とりあえず、以下のコードを入力する。
 
 \begin{lstlisting}[caption=/WebContent/index.jsp]
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -205,8 +236,15 @@ META-INF/
 !jstl-impl-1.2.jar
 \end{lstlisting}
 
+\textsf{src}フォルダは全てGitの管理下においていいが、\textsf{WebContent}の場合は
+\textsf{META-INF}フォルダはGitの管理から外したほうがいい。
+
+以上のようにすることで、たとえば Tomcat8環境(Java1.8) で作成した
+webアプリのソースコードをTomcat9環境(Java11)のプロジェクトで読み込むことも
+可能となる。
+
 
 
 \include{end}
 
-%% 修正時刻： Tue Jul 13 16:15:28 2021
+%% 修正時刻： Tue Jul 13 21:11:51 2021
